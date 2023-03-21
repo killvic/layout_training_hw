@@ -297,7 +297,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:id="@+id/rvReviews"
+                android:id="@+id/rvReview"
                 app:layout_constraintStart_toStartOf="@+id/nsvReviews"
                 app:layout_constraintTop_toTopOf="@+id/nsvReviews"
                 tools:listitem="@layout/review_view_row" />
