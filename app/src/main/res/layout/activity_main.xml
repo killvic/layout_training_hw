@@ -277,18 +277,26 @@
             app:layout_constraintTop_toBottomOf="@+id/star2_1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <View
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btInstall"
-        app:layout_constraintTop_toBottomOf="@+id/clRating">
+        app:layout_constraintTop_toBottomOf="@+id/clRating"
+        app:layout_constraintBottom_toTopOf="@+id/btInstall">
 
-        <androidx.core.widget.NestedScrollView
+    </View>
+    
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        app:layout_constraintBottom_toTopOf="@id/btInstall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/nsvReviews"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -296,14 +304,15 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="match_parent"
                 android:id="@+id/rvReview"
-                app:layout_constraintStart_toStartOf="@+id/nsvReviews"
-                app:layout_constraintTop_toTopOf="@+id/nsvReviews"
+                android:overScrollMode="never"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:listitem="@layout/review_view_row" />
-        </androidx.core.widget.NestedScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <Button
         android:id="@+id/btInstall"
