@@ -42,7 +42,8 @@ class AdapterForGameScreen(
             tvReviewText.text = review.reviewText
             Glide.with(view.context)
                 .load(avatarURL)
-                .centerCrop()
+                //.centerCrop()
+                .circleCrop()
                 .into(ivReviewerAvatar)
         }
     }
